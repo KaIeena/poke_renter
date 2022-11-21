@@ -5,7 +5,7 @@ class Pokemon < ApplicationRecord
 
   POKEMONS = ["Evoli", "Roucoups", "Nosferapti", "Dracaufeu", "Pikachu", "Onix", "Taupiqueur", "Bulbizarre", "Psykokwak", "Machoc", "Chrysacier", "Ectoplasma", "Alakazam", "Tentacool", "Piafabec", "Magmar", "Ratata", "Ronflex", "Rondoudou", "Magneti", "Raichu", "Tortank", "Abo", "Rinocorne", "Tauros", "Sacdenoeuds", "Doduo", "Minidraco", "Draco", "Dracolosse", "Ramoloss", "Flagadoss", "Insecateur", "Ronflex", "Articodin", "Sulfura", "Elector", "Mew", "Mewtwo"]
 
-  CAPACITIES = ["Teleport", "Psyko", "Métronome", "Ultralaser", "Hypnose", "Léchouille", "Dévorêve", "Ombre Nocture", "Balayage", "Groz'Yeux", "Puissance", "Poing Karaté", "Tornade", "Vol", "Cyclone", "Vive-attaque", "Vampirisme", "Ultrason", "Morsure", "Cru-ailes", "Tunnel", "Jet de Sable", "Tranche", "Séisme", "Jet-Pierres", "Étreinte", "Armure", "Souplesse", "Tonnerre", "Hâte", "Choc-mental", "Pistolet à O", "Amnésie", "Explosion", "Secretion", " - ", "Lance-flammes", "Frappe-atlas", "Charge", "Vampigraine", "Fouet de lianes", "Poudre dodo", "Mimi-queue"]
+  CAPACITIES = [ " - ", "Teleport", "Psyko", "Métronome", "Ultralaser", "Hypnose", "Léchouille", "Dévorêve", "Ombre Nocture", "Balayage", "Groz'Yeux", "Puissance", "Poing Karaté", "Tornade", "Vol", "Cyclone", "Vive-attaque", "Vampirisme", "Ultrason", "Morsure", "Cru-ailes", "Tunnel", "Jet de sable", "Tranche", "Séisme", "Jet-Pierres", "Étreinte", "Armure", "Souplesse", "Tonnerre", "Hâte", "Choc-mental", "Pistolet à O", "Amnésie", "Explosion", "Secretion", "Lance-flammes", "Frappe-atlas", "Charge", "Vampigraine", "Fouet lianes", "Poudre dodo", "Mimi-queue"]
 
   validates :name, inclusion: { in: POKEMONS }
 

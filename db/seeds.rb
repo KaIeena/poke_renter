@@ -6,6 +6,21 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+
+# User.create!(
+#   username: "Sasha",
+#   password: "password2",
+#   email: "sasha@pokemon.com"
+# )
+
+# User.create!(
+#   username: "James",
+#   password: "password3",
+#   email: "james@pokemon.com"
+# )
+
+Pokemon.destroy_all
+
 Pokemon.create!(
   name: "Evoli",
   typ: "Normal",
@@ -16,7 +31,8 @@ Pokemon.create!(
   hp: 251,
   atk: 146,
   def: 136,
-  spd: 146
+  spd: 146,
+  user_id: 1
 )
 
 Pokemon.create!(
@@ -29,7 +45,8 @@ Pokemon.create!(
   hp: 231,
   atk: 134,
   def: 134,
-  spd: 126
+  spd: 126,
+  user_id: 1
 )
 
 Pokemon.create!(
@@ -42,7 +59,8 @@ Pokemon.create!(
   hp: 241,
   atk: 76,
   def: 146,
-  spd: 96
+  spd: 96,
+  user_id: 1
 )
 
 Pokemon.create!(
@@ -55,7 +73,8 @@ Pokemon.create!(
   hp: 297,
   atk: 204,
   def: 192,
-  spd: 236
+  spd: 236,
+  user_id: 1
 )
 
 Pokemon.create!(
@@ -68,7 +87,8 @@ Pokemon.create!(
   hp: 241,
   atk: 140,
   def: 132,
-  spd: 146
+  spd: 146,
+  user_id: 2
 )
 
 Pokemon.create!(
@@ -81,7 +101,8 @@ Pokemon.create!(
   hp: 211,
   atk: 146,
   def: 116,
-  spd: 216
+  spd: 216,
+  user_id: 1
 )
 
 Pokemon.create!(
@@ -94,20 +115,22 @@ Pokemon.create!(
   hp: 211,
   atk: 146,
   def: 116,
-  spd: 216
+  spd: 216,
+  user_id: 2
 )
 
 Pokemon.create!(
   name: "Taupiqueur",
   typ: "Sol",
   cap1: "Tunnel",
-  cap2: "Jet de Sable",
+  cap2: "Jet de sable",
   cap3: "Tranche",
   cap4: "Séisme",
   hp: 161,
   atk: 146,
   def: 86,
-  spd: 226
+  spd: 226,
+  user_id: 2
 )
 
 Pokemon.create!(
@@ -120,7 +143,8 @@ Pokemon.create!(
   hp: 221,
   atk: 126,
   def: 106,
-  spd: 209
+  spd: 209,
+  user_id: 3
 )
 
 Pokemon.create!(
@@ -133,7 +157,8 @@ Pokemon.create!(
   hp: 267,
   atk: 156,
   def: 146,
-  spd: 178
+  spd: 178,
+  user_id: 3
 )
 
 Pokemon.create!(
@@ -146,7 +171,8 @@ Pokemon.create!(
   hp: 281,
   atk: 196,
   def: 136,
-  spd: 95
+  spd: 95,
+  user_id: 3
 )
 
 Pokemon.create!(
@@ -159,7 +185,8 @@ Pokemon.create!(
   hp: 261,
   atk: 296,
   def: 167,
-  spd: 230
+  spd: 230,
+  user_id: 3
 )
 
 Pokemon.create!(
@@ -172,5 +199,6 @@ Pokemon.create!(
   hp: 251,
   atk: 306,
   def: 126,
-  spd: 276
+  spd: 276,
+  user_id: 3
 )
