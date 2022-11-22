@@ -5,7 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Pokemon.destroy_all
 User.destroy_all
+
 
 sasha = User.create!(
   username: "Sasha",
@@ -13,11 +16,20 @@ sasha = User.create!(
   email: "sasha@pokemon.com"
 )
 
-james = User.create!(
-  username: "James",
+
+ondine = User.create!(
+  username: "Ondine",
   password: "pokemon",
-  email: "james@pokemon.com"
+  email: "ondine@pokemon.com"
 )
+
+
+pierre = User.create!(
+  username: "Pierre",
+  password: "pokemon",
+  email: "pierre@pokemon.com"
+)
+
 
 jessie = User.create!(
   username: "Jessie",
@@ -25,33 +37,20 @@ jessie = User.create!(
   email: "jessie@pokemon.com"
 )
 
-Pokemon.destroy_all
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+james = User.create!(
+  username: "James",
+  password: "pokemon",
+  email: "james@pokemon.com"
+)
 
 
-# User.create!(
-#   username: "Sasha",
-#   password: "pokemon",
-#   email: "sasha@pokemon.com"
-# )
+require "open-uri"
 
-# User.create!(
-#   username: "James",
-#   password: "pokemon",
-#   email: "james@pokemon.com"
-# )
 
-Pokemon.destroy_all
-
-Pokemon.create!(
-  name: "Evoli",
+file = URI.open("https://www.pokepedia.fr/images/thumb/8/8b/%C3%89voli-RFVF.png/375px-%C3%89voli-RFVF.png")
+pokemon = Pokemon.new(
+  name: "Évoli",
   typ: "Normal",
   cap1: "Charge",
   cap2: "Mimi-Queue",
@@ -61,11 +60,14 @@ Pokemon.create!(
   atk: 146,
   def: 136,
   spd: 146,
-  user: sasha
+  user_id: ondine.id
 )
+pokemon.photo.attach(io: file, filename: "évoli.png", content_type: "image/png")
+pokemon.save
 
-Pokemon.create!(
-  name: "Bulbizarre",
+
+file = URI.open("https://www.pokepedia.fr/images/thumb/e/ef/Bulbizarre-RFVF.png/375px-Bulbizarre-RFVF.png")
+pokemon = Pokemon.new(
   typ: "Plante",
   cap1: "Charge",
   cap2: "Vampigraine",
@@ -75,12 +77,16 @@ Pokemon.create!(
   atk: 134,
   def: 134,
   spd: 126,
-  user: sasha
+  user_id: sasha.id
 )
+pokemon.photo.attach(io: file, filename: "bulbizarre.png", content_type: "image/png")
+pokemon.save
 
-Pokemon.create!(
+
+file = URI.open("https://www.pokepedia.fr/images/thumb/6/6c/Chrysacier-RFVF.png/375px-Chrysacier-RFVF.png")
+pokemon = Pokemon.new(
   name: "Chrysacier",
-  typ: "Insect",
+  typ: "Insecte",
   cap1: "Armure",
   cap2: "Sécrétion",
   cap3: " - ",
@@ -89,10 +95,14 @@ Pokemon.create!(
   atk: 76,
   def: 146,
   spd: 96,
-  user: sasha
+  user_id: sasha.id
 )
+pokemon.photo.attach(io: file, filename: "chrysacier.png", content_type: "image/png")
+pokemon.save
 
-Pokemon.create!(
+
+file = URI.open("https://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/375px-Dracaufeu-RFVF.png")
+pokemon = Pokemon.new(
   name: "Dracaufeu",
   typ: "Feu",
   cap1: "Lance-Flamme",
@@ -103,10 +113,14 @@ Pokemon.create!(
   atk: 204,
   def: 192,
   spd: 236,
-  user: sasha
+  user_id: sasha.id
 )
+pokemon.photo.attach(io: file, filename: "dracaufeu.png", content_type: "image/png")
+pokemon.save
 
-Pokemon.create!(
+
+file = URI.open("https://www.pokepedia.fr/images/thumb/4/44/Psykokwak-RFVF.png/375px-Psykokwak-RFVF.png")
+pokemon = Pokemon.new(
   name: "Psykokwak",
   typ: "Eau",
   cap1: "Choc Mental",
@@ -117,12 +131,16 @@ Pokemon.create!(
   atk: 140,
   def: 132,
   spd: 146,
-  user: james
+  user_id: ondine.id
 )
+pokemon.photo.attach(io: file, filename: "psykokwak.png", content_type: "image/png")
+pokemon.save
 
-Pokemon.create!(
+
+file = URI.open("https://www.pokepedia.fr/images/thumb/7/76/Pikachu-DEPS.png/375px-Pikachu-DEPS.png")
+pokemon = Pokemon.new(
   name: "Pikachu",
-  typ: "Electrik",
+  typ: "Électrik",
   cap1: "Tonnerre",
   cap2: "Vive-Attaque",
   cap3: "Hâte",
@@ -131,10 +149,14 @@ Pokemon.create!(
   atk: 146,
   def: 116,
   spd: 216,
-  user: sasha
+  user_id: sasha.id
 )
+pokemon.photo.attach(io: file, filename: "pikachu.png", content_type: "image/png")
+pokemon.save
 
-Pokemon.create!(
+
+file = URI.open("https://www.pokepedia.fr/images/thumb/2/24/Onix-RFVF.png/375px-Onix-RFVF.png")
+pokemon = Pokemon.new(
   name: "Onix",
   typ: "Roche",
   cap1: "Jet-Pierres",
@@ -145,10 +167,14 @@ Pokemon.create!(
   atk: 146,
   def: 116,
   spd: 216,
-  user: james
+  user_id: pierre.id
 )
+pokemon.photo.attach(io: file, filename: "onix.png", content_type: "image/png")
+pokemon.save
 
-Pokemon.create!(
+
+file = URI.open("https://www.pokepedia.fr/images/thumb/a/aa/Taupiqueur-RFVF.png/375px-Taupiqueur-RFVF.png")
+pokemon = Pokemon.new(
   name: "Taupiqueur",
   typ: "Sol",
   cap1: "Tunnel",
@@ -159,10 +185,14 @@ Pokemon.create!(
   atk: 146,
   def: 86,
   spd: 226,
-  user: james
+  user_id: james.id
 )
+pokemon.photo.attach(io: file, filename: "taupiqueur.png", content_type: "image/png")
+pokemon.save
 
-Pokemon.create!(
+
+file = URI.open("https://www.pokepedia.fr/images/thumb/2/2b/Nosferapti-RFVF.png/375px-Nosferapti-RFVF.png")
+pokemon = Pokemon.new(
   name: "Nosferapti",
   typ: "Poison",
   cap1: "Vampirisme",
@@ -173,10 +203,14 @@ Pokemon.create!(
   atk: 126,
   def: 106,
   spd: 209,
-  user: jessie
+  user_id: pierre.id
 )
+pokemon.photo.attach(io: file, filename: "nosferapti.png", content_type: "image/png")
+pokemon.save
 
-Pokemon.create!(
+
+file = URI.open("https://www.pokepedia.fr/images/thumb/d/dc/Roucoups-RFVF.png/375px-Roucoups-RFVF.png")
+pokemon = Pokemon.new(
   name: "Roucoups",
   typ: "Vol",
   cap1: "Tornade",
@@ -187,10 +221,14 @@ Pokemon.create!(
   atk: 156,
   def: 146,
   spd: 178,
-  user: jessie
+  user_id: sasha.id
 )
+pokemon.photo.attach(io: file, filename: "roucoups.png", content_type: "image/png")
+pokemon.save
 
-Pokemon.create!(
+
+file = URI.open("https://www.pokepedia.fr/images/thumb/7/75/Machoc-RFVF.png/375px-Machoc-RFVF.png")
+pokemon = Pokemon.new(
   name: "Machoc",
   typ: "Combat",
   cap1: "Balayage",
@@ -201,10 +239,14 @@ Pokemon.create!(
   atk: 196,
   def: 136,
   spd: 95,
-  user: jessie
+  user_id: pierre.id
 )
+pokemon.photo.attach(io: file, filename: "machoc.png", content_type: "image/png")
+pokemon.save
 
-Pokemon.create!(
+
+file = URI.open("https://www.pokepedia.fr/images/thumb/8/8d/Ectoplasma-RFVF.png/375px-Ectoplasma-RFVF.png")
+pokemon = Pokemon.new(
   name: "Ectoplasma",
   typ: "Spectre",
   cap1: "Hypnose",
@@ -215,10 +257,14 @@ Pokemon.create!(
   atk: 296,
   def: 167,
   spd: 230,
-  user: jessie
+  user_id: jessie.id
 )
+pokemon.photo.attach(io: file, filename: "ectoplasma.png", content_type: "image/png")
+pokemon.save
 
-Pokemon.create!(
+
+file = URI.open("https://www.pokepedia.fr/images/thumb/6/68/Alakazam-RFVF.png/375px-Alakazam-RFVF.png")
+pokemon = Pokemon.new(
   name: "Alakazam",
   typ: "Psy",
   cap1: "Téléport",
@@ -229,5 +275,7 @@ Pokemon.create!(
   atk: 306,
   def: 126,
   spd: 276,
-  user: jessie
+  user_id: james.id
 )
+pokemon.photo.attach(io: file, filename: "alakazam.png", content_type: "image/png")
+pokemon.save
