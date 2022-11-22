@@ -1,4 +1,6 @@
 class PokemonsController < ApplicationController
+before_action :set_pokemon, only: [:show]
+
   def index
     @pokemons = Pokemon.all
   end
@@ -35,6 +37,10 @@ class PokemonsController < ApplicationController
 
   def pokemon_params
     params.require(:pokemon).permit(:name, :type, :hp, :atk, :def, :spd, :cap1, :cap2, :cap3, :cap4, :user_id)
+  end
+
+  def set_pokemon
+    @pokemon = Pokemon.find(params[:id])
   end
 
 end

@@ -1,7 +1,18 @@
 <h1>Pokemons</h1>
 
+<div class="container" >
 <div id="pokemons">
+<div class="card-group">
   <% @pokemons.each do |pokemon| %>
-    <%= render pokemon %>
-  <% end %>
+<div class="card" style="width: 18rem;">
+  <img src="https://www.pokepedia.fr/images/thumb/4/44/Psykokwak-RFVF.png/250px-Psykokwak-RFVF.png" class="card-img-top" alt="some pokemon">
+<div class="card-body">
+    <h5 class="card-title">Pokemon</h5>
+    <p class="card-text">  <%= pokemon.name %> : <%= pokemon.typ %> </p>
+    <a href="#" class="btn btn-primary"><%= link_to "Show pokemon", pokemon %></a>
+  </div>
+</div>
+<% end %>
+</div>
+</div>
 </div>
