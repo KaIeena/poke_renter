@@ -3,5 +3,6 @@
 <div id="pokemons">
   <% @pokemons.each do |pokemon| %>
     <%= render pokemon %>
+    <%= link_to "Show pokemon", pokemon %>
   <% end %>
 </div>
