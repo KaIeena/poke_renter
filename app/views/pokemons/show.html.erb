@@ -1,1 +1,33 @@
-<%= render @pokemon %>
+<div id="<%= dom_id pokemon %>">
+  <p>
+    <strong>Name:</strong>
+    <%= pokemon.name %>
+  </p>
+
+  <p>
+    <strong>Type:</strong>
+    <%= pokemon.typ %>
+  </p>
+
+  <p>
+    <strong>Stats:</strong>
+    <p> HP : <%= pokemon.hp %> </p>
+    <p> ATK : <%= pokemon.atk %> </p>
+    <p> DEF : <%= pokemon.def %> </p>
+    <p> SPD : <%= pokemon.spd %> </p>
+  </p>
+
+  <p>
+    <strong>Capacities:</strong>
+    <p> - <%= pokemon.cap1 %> </p>
+    <p> - <%= pokemon.cap2 %> </p>
+    <p> - <%= pokemon.cap3 %> </p>
+    <p> - <%= pokemon.cap4 %> </p>
+  </p>
+
+ <p>
+    <strong>Trainer:</strong>
+    <%= pokemon.user.username %>
+  </p>
+
+</div>
