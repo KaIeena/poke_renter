@@ -9,19 +9,19 @@ User.destroy_all
 
 sasha = User.create!(
   username: "Sasha",
-  password: "password2",
+  password: "pokemon",
   email: "sasha@pokemon.com"
 )
 
 james = User.create!(
   username: "James",
-  password: "password3",
+  password: "pokemon",
   email: "james@pokemon.com"
 )
 
 jessie = User.create!(
   username: "Jessie",
-  password: "password4",
+  password: "pokemon",
   email: "jessie@pokemon.com"
 )
 
@@ -35,6 +35,18 @@ Pokemon.destroy_all
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+
+# User.create!(
+#   username: "Sasha",
+#   password: "pokemon",
+#   email: "sasha@pokemon.com"
+# )
+
+# User.create!(
+#   username: "James",
+#   password: "pokemon",
+#   email: "james@pokemon.com"
+# )
 
 Pokemon.destroy_all
 
