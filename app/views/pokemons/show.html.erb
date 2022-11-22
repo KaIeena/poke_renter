@@ -1,46 +1,42 @@
-<p>
+<h1 class="card-title"><strong><%= @pokemon.name %></strong></h1>
 
-<% if @pokemon.photo.attached? %>
-  <%= cl_image_tag @pokemon.photo.key %>
-<% end %>
-</p>
+<div class="card" style="width: 550px;">
 
-<p>
-  <strong>Name:</strong>
-  <%= @pokemon.name %>
-</p>
+  <% if @pokemon.photo.attached? %>
+    <%= cl_image_tag @pokemon.photo.key %>
+  <% end %>
 
-<p>
-  <strong>Type:</strong>
-  <%= @pokemon.typ %>
-</p>
+  <div class="card-body">
 
-<p>
-  <strong>Stats:</strong>
-  <p> HP : <%= @pokemon.hp %> </p>
-  <p> ATK : <%= @pokemon.atk %> </p>
-  <p> DEF : <%= @pokemon.def %> </p>
-  <p> SPD : <%= @pokemon.spd %> </p>
-</p>
+    <div class="card-text">
+      <h5><em><%= @pokemon.typ %></em></h5>
+      <ul>
+        <li> HP : <%= @pokemon.hp %> </li>
+        <li> ATK : <%= @pokemon.atk %> </li>
+        <li> DEF : <%= @pokemon.def %> </li>
+        <li> SPD : <%= @pokemon.spd %> </li>
+      </ul>
 
-<p>
-  <strong>Capacities:</strong>
-  <p> - <%= @pokemon.cap1 %> </p>
-  <p> - <%= @pokemon.cap2 %> </p>
-  <p> - <%= @pokemon.cap3 %> </p>
-  <p> - <%= @pokemon.cap4 %> </p>
-</p>
+    <h5><strong>Capacities:</strong></h5>
+    <ul>
+      <li> <%= @pokemon.cap1 %> </li>
+      <li> <%= @pokemon.cap2 %> </li>
+      <li> <%= @pokemon.cap3 %> </li>
+      <li> <%= @pokemon.cap4 %> </li>
+    </ul>
 
-<p>
-  <strong>Trainer:</strong>
-  <%= @pokemon.user.username %>
-</p>
+    </div>
 
-</div>
+    <u><em>Trainer:</u> <%= @pokemon.user.username %></em>
 
-<div>
-  <%= link_to "Edit this Pokémon", edit_pokemon_path(@pokemon) %> |
-  <%= link_to "Back to Pokémons", pokemons_path %>
+<br>
+<br>
 
-  <%= button_to "Delete this Pokémon", @pokemon, method: :delete %>
+    <div class="card-btn">
+      <%= link_to "Edit this Pokémon", edit_pokemon_path(@pokemon), class: "btn btn-info" %>
+
+      <%= link_to "Back to Pokémons", pokemons_path, class: "btn btn-success" %>
+
+      <%= button_to "Delete this Pokémon", @pokemon, method: :delete, class: "btn btn-danger" %>
+    </div>
 </div>
