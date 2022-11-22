@@ -1,0 +1,16 @@
+.card {
+  margin: auto;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-text {
+  column-count: 2;
+}
+
+.card-btn {
+  column-count: 3;
+  display: flex;
+}

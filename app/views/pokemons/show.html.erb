@@ -1,1 +1,42 @@
-<%= render @pokemon %>
+<h1 class="card-title"><strong><%= @pokemon.name %></strong></h1>
+
+<div class="card" style="width: 550px;">
+
+  <% if @pokemon.photo.attached? %>
+    <%= cl_image_tag @pokemon.photo.key %>
+  <% end %>
+
+  <div class="card-body">
+
+    <div class="card-text">
+      <h5><em><%= @pokemon.typ %></em></h5>
+      <ul>
+        <li> HP : <%= @pokemon.hp %> </li>
+        <li> ATK : <%= @pokemon.atk %> </li>
+        <li> DEF : <%= @pokemon.def %> </li>
+        <li> SPD : <%= @pokemon.spd %> </li>
+      </ul>
+
+    <h5><strong>Capacities:</strong></h5>
+    <ul>
+      <li> <%= @pokemon.cap1 %> </li>
+      <li> <%= @pokemon.cap2 %> </li>
+      <li> <%= @pokemon.cap3 %> </li>
+      <li> <%= @pokemon.cap4 %> </li>
+    </ul>
+
+    </div>
+
+    <u><em>Trainer:</u> <%= @pokemon.user.username %></em>
+
+<br>
+<br>
+
+    <div class="card-btn">
+      <%= link_to "Edit this Pokémon", edit_pokemon_path(@pokemon), class: "btn btn-info" %>
+
+      <%= link_to "Back to Pokémons", pokemons_path, class: "btn btn-success" %>
+
+      <%= button_to "Delete this Pokémon", @pokemon, method: :delete, class: "btn btn-danger" %>
+    </div>
+</div>
