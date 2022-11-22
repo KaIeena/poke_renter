@@ -17,6 +17,7 @@ class PokemonsController < ApplicationController
 
   def create
     @pokemon = Pokemon.new(pokemon_params)
+    @pokemon.user = current_user
 
     if @pokemon.save
       redirect_to @pokemon, notice: "Pokemon was successfully created."
