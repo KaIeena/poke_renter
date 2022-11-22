@@ -8,5 +8,13 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 60px;
+}
+
+.navbar-lewagon .btn-outline-danger {
+  color: red;
+  border-color: red;
+  &:hover {
+    color: azure;
+  }
 }
