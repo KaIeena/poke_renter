@@ -7,5 +7,4 @@ Rails.application.routes.draw do
   # root "articles#index"
   # get 'pokemons', to: 'pokemons#index'
   resources :pokemons
-
 end

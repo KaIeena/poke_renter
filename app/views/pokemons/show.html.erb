@@ -1,33 +1,46 @@
-<div id="<%= dom_id pokemon %>">
-  <p>
-    <strong>Name:</strong>
-    <%= pokemon.name %>
-  </p>
+<p>
 
-  <p>
-    <strong>Type:</strong>
-    <%= pokemon.typ %>
-  </p>
+<% if @pokemon.photo.attached? %>
+  <%= cl_image_tag @pokemon.photo.key %>
+<% end %>
+</p>
 
-  <p>
-    <strong>Stats:</strong>
-    <p> HP : <%= pokemon.hp %> </p>
-    <p> ATK : <%= pokemon.atk %> </p>
-    <p> DEF : <%= pokemon.def %> </p>
-    <p> SPD : <%= pokemon.spd %> </p>
-  </p>
+<p>
+  <strong>Name:</strong>
+  <%= @pokemon.name %>
+</p>
 
-  <p>
-    <strong>Capacities:</strong>
-    <p> - <%= pokemon.cap1 %> </p>
-    <p> - <%= pokemon.cap2 %> </p>
-    <p> - <%= pokemon.cap3 %> </p>
-    <p> - <%= pokemon.cap4 %> </p>
-  </p>
+<p>
+  <strong>Type:</strong>
+  <%= @pokemon.typ %>
+</p>
 
- <p>
-    <strong>Trainer:</strong>
-    <%= pokemon.user.username %>
-  </p>
+<p>
+  <strong>Stats:</strong>
+  <p> HP : <%= @pokemon.hp %> </p>
+  <p> ATK : <%= @pokemon.atk %> </p>
+  <p> DEF : <%= @pokemon.def %> </p>
+  <p> SPD : <%= @pokemon.spd %> </p>
+</p>
 
+<p>
+  <strong>Capacities:</strong>
+  <p> - <%= @pokemon.cap1 %> </p>
+  <p> - <%= @pokemon.cap2 %> </p>
+  <p> - <%= @pokemon.cap3 %> </p>
+  <p> - <%= @pokemon.cap4 %> </p>
+</p>
+
+<p>
+  <strong>Trainer:</strong>
+  <%= @pokemon.user.username %>
+</p>
+
+</div>
+
+<div>
+  <%= link_to "Edit this Pokémon", edit_pokemon_path(@pokemon) %> |
+  <%= link_to "Back to Pokémons", pokemons_path %>
+
+  <%= button_to "Delete this Pokémon", @pokemon, method: :delete %>
 </div>
