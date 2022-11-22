@@ -1,14 +1,23 @@
 class PokemonsController < ApplicationController
+  before_action :set_pokemon, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: :index
+
+
+
   def index
     @pokemons = Pokemon.all
   end
 
   def show
+  end
 
+  def new
+    @pokemon = Pokemon.new
   end
 
   def create
     @pokemon = Pokemon.new(pokemon_params)
+    @pokemon.user = current_user
 
     if @pokemon.save
       redirect_to @pokemon, notice: "Pokemon was successfully created."
@@ -17,24 +26,32 @@ class PokemonsController < ApplicationController
     end
   end
 
-  def new
-    @pokemon = Pokemon.new
+  def edit
   end
 
-  # def edit
-  # end
+  def update
+    if @pokemon.update(pokemon_params)
+      redirect_to @pokemon, notice: "Article was successfully updated."
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
 
-  # def update
-  # end
+  def destroy
+    @pokemon.destroy
 
-  # def destroy
-  # end
+    redirect_to pokemons_path
+  end
 
   private
 
+  def set_pokemon
+    @pokemon = Pokemon.find(params[:id])
+  end
+
 
   def pokemon_params
-    params.require(:pokemon).permit(:name, :type, :hp, :atk, :def, :spd, :cap1, :cap2, :cap3, :cap4, :user_id)
+    params.require(:pokemon).permit(:photo, :name, :typ, :hp, :atk, :def, :spd, :cap1, :cap2, :cap3, :cap4, :user_id)
   end
 
 end

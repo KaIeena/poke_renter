@@ -1,63 +1,25 @@
-<%= form_with(model: pokemon) do |form| %>
-  <% if pokemon.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(pokemon.errors.count, "error") %> prohibited this pokemon from being saved:</h2>
+<div class="container">
+  <%= simple_form_for pokemon do |f| %>
+    <div>
+      <%= f.input :photo, as: :file %>
+      <%= f.input :name, collection:  Pokemon::POKEMONS %>
+      <%= f.input :typ, collection: Pokemon::TYPES %>
+    </div>
 
-      <ul>
-        <% pokemon.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+    <div>
+      <%= f.input :hp %>
+      <%= f.input :atk %>
+      <%= f.input :def %>
+      <%= f.input :spd %>
+    </div>
+      <%= f.input :cap1, collection:  Pokemon::CAPACITIES%>
+      <%= f.input :cap2, collection:  Pokemon::CAPACITIES%>
+      <%= f.input :cap3, collection:  Pokemon::CAPACITIES%>
+      <%= f.input :cap4, collection:  Pokemon::CAPACITIES%>
+    </div>
+
+    <div>
+      <%= f.submit %>
     </div>
   <% end %>
-
-
- <div>
- <%= form.input :name, collection:  pokemon::POKEMONS%>
- </div>
-
- <div>
-    <%= form.label :type, style: "display: block" %>
-    <%= form.text_field :type %>
-  </div>
-
-  <div>
-    <%= form.label :hp, style: "display: block" %>
-    <%= form.text_field :hp %>
-  </div>
-
-    <div>
-    <%= form.label :atk, style: "display: block" %>
-    <%= form.text_field :atk %>
-  </div>
-
-    <div>
-    <%= form.label :def, style: "display: block" %>
-    <%= form.text_field :def %>
-  </div>
-
-    <div>
-    <%= form.label :spd, style: "display: block" %>
-    <%= form.text_field :spd %>
-  </div>
-
-<div>
- <%= form.input :cap1, collection:  pokemon::CAPACITIES%>
- </div>
-
- <div>
- <%= form.input :cap2, collection:  pokemon::CAPACITIES%>
- </div>
-
- <div>
- <%= form.input :cap3, collection:  pokemon::CAPACITIES%>
- </div>
-
- <div>
- <%= form.input :cap4, collection:  pokemon::CAPACITIES%>
- </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
