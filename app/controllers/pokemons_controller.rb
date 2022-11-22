@@ -1,4 +1,7 @@
 class PokemonsController < ApplicationController
+  before_action :set_pokemon, only: %i[show]
+
+
   def index
     @pokemons = Pokemon.all
   end
@@ -31,6 +34,10 @@ class PokemonsController < ApplicationController
   # end
 
   private
+
+  def set_pokemon
+    @pokemon = Pokemon.find(params[:id])
+  end
 
 
   def pokemon_params
