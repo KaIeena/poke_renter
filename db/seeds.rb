@@ -9,13 +9,13 @@
 
 # User.create!(
 #   username: "Sasha",
-#   password: "password2",
+#   password: "pokemon",
 #   email: "sasha@pokemon.com"
 # )
 
 # User.create!(
 #   username: "James",
-#   password: "password3",
+#   password: "pokemon",
 #   email: "james@pokemon.com"
 # )
 
