@@ -1,16 +1,43 @@
 .card {
+  width: 1000px;
   margin: auto;
+  display: flex;
 }
 
-.card-title {
+.card-name {
+  padding: 50px;
   text-align: center;
 }
 
-.card-text {
+.card-content {
+  display: flex;
+}
+
+.card-photo {
+  padding-left: 65px;
+  width: 400px;
+}
+
+.card-info {
   column-count: 2;
+  position: relative;
+}
+
+.card-stats {
+  padding-left: 150px;
+}
+.card-capacities {
+  padding-left: 100px;
+}
+
+.card-nature {
+  position: absolute;
+  left: 300px;
+  top: 200px;
 }
 
 .card-btn {
-  column-count: 3;
-  display: flex;
+  position: absolute;
+  left: 400px;
+  top: 350px;
 }

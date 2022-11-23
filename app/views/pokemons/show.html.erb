@@ -1,44 +1,50 @@
-<div class="container" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.pinimg.com/originals/2b/3b/04/2b3b04771ccca26c3dd96d781b0117ca.jpg);">
+<div class= "show-pokemon">
 
-  <div class="card" style="width: 1000px;">
+  <div class="card">
 
-    <h1><strong><%= @pokemon.name %></strong></h1>
+    <div class="card-name">
+      <h1><strong><%= @pokemon.name %></strong></h1>
       <h5><em><%= @pokemon.typ %></em></h5>
-
-    <div class="card-photo">
-      <% if @pokemon.photo.attached? %>
-        <%= cl_image_tag @pokemon.photo.key %>
-      <% end %>
     </div>
 
-    <div class="card-stats">
-      <h3><strong>Stats:</strong></h3>
-      <ul>
-        <li> LVL : <%= @pokemon.lvl %> </li>
-        <li> HP : <%= @pokemon.hp %> </li>
-        <li> ATK : <%= @pokemon.atk %> </li>
-        <li> DEF : <%= @pokemon.def %> </li>
-        <li> SPD : <%= @pokemon.spd %> </li>
-      </ul>
-    </div>
+    <div class="card-content">
+      <div class="card-photo">
+        <% if @pokemon.photo.attached? %>
+          <%= cl_image_tag @pokemon.photo.key %>
+        <% end %>
+      </div>
 
-    <div class="card-capacities">
-      <h3><strong>Capacities:</strong></h3>
-      <ul>
-        <li> <%= @pokemon.cap1 %> </li>
-        <li> <%= @pokemon.cap2 %> </li>
-        <li> <%= @pokemon.cap3 %> </li>
-        <li> <%= @pokemon.cap4 %> </li>
-      </ul>
-    </div>
+      <div class="card-info">
+        <div class="card-stats">
+          <h3><strong>Stats:</strong></h3>
+          <ul>
+            <li> LVL : <%= @pokemon.lvl %> </li>
+            <li> HP : <%= @pokemon.hp %> </li>
+            <li> ATK : <%= @pokemon.atk %> </li>
+            <li> DEF : <%= @pokemon.def %> </li>
+            <li> SPD : <%= @pokemon.spd %> </li>
+          </ul>
+        </div>
 
-    <div class="card-nature">
-      <u><em>Nature:</em></u> <%= @pokemon.nature %>
-      <u><em>Trainer:</u> <%= @pokemon.user.username %></em>
-    </div>
+        <div class="card-capacities">
+          <h3><strong>Capacities:</strong></h3>
+          <ul>
+            <li> <%= @pokemon.cap1 %> </li>
+            <li> <%= @pokemon.cap2 %> </li>
+            <li> <%= @pokemon.cap3 %> </li>
+            <li> <%= @pokemon.cap4 %> </li>
+          </ul>
+        </div>
 
-    <div class="card-btn">
-      <a href="#" class="btn btn-success"></a>
+        <div class="card-nature">
+          <u><em>Nature:</em></u> <%= @pokemon.nature %>
+          <u><em>Trainer:</u> <%= @pokemon.user.username %></em>
+        </div>
+
+        <div class="card-btn">
+          <a href="#" class="btn btn-success">Let's Go !</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

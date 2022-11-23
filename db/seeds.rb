@@ -61,6 +61,7 @@ pokemon = Pokemon.new(
   atk: 146,
   def: 136,
   spd: 146,
+  nature: "Jovial",
   user_id: ondine.id
 )
 pokemon.photo.attach(io: file, filename: "évoli.png", content_type: "image/png")
@@ -79,6 +80,7 @@ pokemon = Pokemon.new(
   atk: 134,
   def: 134,
   spd: 126,
+  nature: "Timide",
   user_id: sasha.id
 )
 pokemon.photo.attach(io: file, filename: "bulbizarre.png", content_type: "image/png")
@@ -98,6 +100,7 @@ pokemon = Pokemon.new(
   atk: 76,
   def: 146,
   spd: 96,
+  nature: "Discret",
   user_id: sasha.id
 )
 pokemon.photo.attach(io: file, filename: "chrysacier.png", content_type: "image/png")
@@ -117,6 +120,7 @@ pokemon = Pokemon.new(
   atk: 204,
   def: 192,
   spd: 236,
+  nature: "Malin",
   user_id: sasha.id
 )
 pokemon.photo.attach(io: file, filename: "dracaufeu.png", content_type: "image/png")
@@ -136,6 +140,7 @@ pokemon = Pokemon.new(
   atk: 140,
   def: 132,
   spd: 146,
+  nature: "Bizarre",
   user_id: ondine.id
 )
 pokemon.photo.attach(io: file, filename: "psykokwak.png", content_type: "image/png")
@@ -155,6 +160,7 @@ pokemon = Pokemon.new(
   atk: 146,
   def: 116,
   spd: 216,
+  nature: "Brave",
   user_id: sasha.id
 )
 pokemon.photo.attach(io: file, filename: "pikachu.png", content_type: "image/png")
@@ -174,6 +180,7 @@ pokemon = Pokemon.new(
   atk: 146,
   def: 116,
   spd: 216,
+  nature: "Relax",
   user_id: pierre.id
 )
 pokemon.photo.attach(io: file, filename: "onix.png", content_type: "image/png")
@@ -193,6 +200,7 @@ pokemon = Pokemon.new(
   atk: 146,
   def: 86,
   spd: 226,
+  nature: "Pressé",
   user_id: james.id
 )
 pokemon.photo.attach(io: file, filename: "taupiqueur.png", content_type: "image/png")
@@ -212,6 +220,7 @@ pokemon = Pokemon.new(
   atk: 126,
   def: 106,
   spd: 209,
+  nature: "Prudent",
   user_id: pierre.id
 )
 pokemon.photo.attach(io: file, filename: "nosferapti.png", content_type: "image/png")
@@ -231,6 +240,7 @@ pokemon = Pokemon.new(
   atk: 156,
   def: 146,
   spd: 178,
+  nature: "Docile",
   user_id: sasha.id
 )
 pokemon.photo.attach(io: file, filename: "roucoups.png", content_type: "image/png")
@@ -250,6 +260,7 @@ pokemon = Pokemon.new(
   atk: 196,
   def: 136,
   spd: 95,
+  nature: "Assuré",
   user_id: pierre.id
 )
 pokemon.photo.attach(io: file, filename: "machoc.png", content_type: "image/png")
@@ -269,6 +280,7 @@ pokemon = Pokemon.new(
   atk: 296,
   def: 167,
   spd: 230,
+  nature: "Hardi",
   user_id: jessie.id
 )
 pokemon.photo.attach(io: file, filename: "ectoplasma.png", content_type: "image/png")
@@ -288,6 +300,7 @@ pokemon = Pokemon.new(
   atk: 306,
   def: 126,
   spd: 276,
+  nature: "Rigide",
   user_id: james.id
 )
 pokemon.photo.attach(io: file, filename: "alakazam.png", content_type: "image/png")
@@ -307,6 +320,7 @@ pokemon = Pokemon.new(
   atk: 306,
   def: 126,
   spd: 276,
+  nature: "Doux",
   user_id: sasha.id
 )
 pokemon.photo.attach(io: file, filename: "lokhlass.png", content_type: "image/png")
@@ -326,6 +340,7 @@ pokemon = Pokemon.new(
   atk: 306,
   def: 126,
   spd: 276,
+  nature: "Foufou",
   user_id: ondine.id
 )
 pokemon.photo.attach(io: file, filename: "dracolosse.png", content_type: "image/png")
