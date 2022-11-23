@@ -1,13 +1,17 @@
 .card {
-  margin: auto;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 250px;
+
 }
 
 .card-title {
-  text-align: center;
+  text-align: inline;
 }
 
 .card-text {
   column-count: 2;
+  display: flex;
 }
 
 .card-btn {

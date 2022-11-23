@@ -2,14 +2,15 @@
 
 <div class="container" >
 <div id="pokemons">
-<div class="card-group">
+<div class="cards">
   <% @pokemons.each do |pokemon| %>
-<div class="card" style="width: 18rem;">
-  <img src="https://www.pokepedia.fr/images/thumb/4/44/Psykokwak-RFVF.png/250px-Psykokwak-RFVF.png" class="card-img-top" alt="some pokemon">
+<div class="card" >
+  <img class="card-img" src="https://www.pokepedia.fr/images/thumb/4/44/Psykokwak-RFVF.png/250px-Psykokwak-RFVF.png" class="card-img-top" alt="some pokemon">
 <div class="card-body">
-    <h5 class="card-title">Pokemon</h5>
-    <p class="card-text">  <%= pokemon.name %> : <%= pokemon.typ %> </p>
-    <a href="#" class="btn btn-primary"><%= link_to "Show pokemon", pokemon %></a>
+    <h5 class="card-title"><%= pokemon.name %></h5>
+    <p class="card-text"> Type : <%= pokemon.typ %></p>
+    <p class="card-text"> Trainer : <%= pokemon.user.username %> </p>
+    <%= link_to "Show pokemon", pokemon, class:"btn btn-primary" %>
   </div>
 </div>
 <% end %>

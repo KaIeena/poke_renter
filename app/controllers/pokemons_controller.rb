@@ -52,8 +52,4 @@ class PokemonsController < ApplicationController
     params.require(:pokemon).permit(:photo, :name, :typ, :hp, :atk, :def, :spd, :cap1, :cap2, :cap3, :cap4, :user_id)
   end
 
-  def set_pokemon
-    @pokemon = Pokemon.find(params[:id])
-  end
-
 end
