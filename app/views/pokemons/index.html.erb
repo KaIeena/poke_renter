@@ -1,9 +1,22 @@
 <h1>Pokemons</h1>
 
+<div class="container" >
 <div id="pokemons">
-  <% @pokemons.each do |pokemon| %>
-    <%= render pokemon %>
-    <%= link_to "Show Pokémon", pokemon %>
-    <%= link_to "New Pokémon", new_pokemon_path %>
-  <% end %>
+<div class="cards">
+    <% @pokemons.each do |pokemon| %>
+    <div class="card-<%= pokemon.typ %>">
+      <% if pokemon.photo.attached? %>
+        <%= cl_image_tag pokemon.photo.key, class:"card-img-index" %>
+      <% end %>
+        <div class="card-body-index">
+        <h5 class="card-title-index"> <strong><%= pokemon.name %> </strong></h5>
+        <p class="card-text-index"> <strong> Type : </strong> <%= pokemon.typ %></p>
+        <p class="card-text-index"> <strong> Trainer : </strong> <%= pokemon.user.username %> </p>
+        <%= link_to "Show pokemon", pokemon, class:"btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>
 </div>
