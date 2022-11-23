@@ -1,42 +1,56 @@
-<h1 class="card-title"><strong><%= @pokemon.name %></strong></h1>
+<div class= "show-pokemon">
 
-<div class="card" style="width: 550px;">
+  <div class="card">
 
-  <% if @pokemon.photo.attached? %>
-    <%= cl_image_tag @pokemon.photo.key %>
-  <% end %>
-
-  <div class="card-body">
-
-    <div class="card-text">
+    <div class="card-name">
+      <h1><strong><%= @pokemon.name %></strong></h1>
       <h5><em><%= @pokemon.typ %></em></h5>
-      <ul>
-        <li> HP : <%= @pokemon.hp %> </li>
-        <li> ATK : <%= @pokemon.atk %> </li>
-        <li> DEF : <%= @pokemon.def %> </li>
-        <li> SPD : <%= @pokemon.spd %> </li>
-      </ul>
-
-    <h5><strong>Capacities:</strong></h5>
-    <ul>
-      <li> <%= @pokemon.cap1 %> </li>
-      <li> <%= @pokemon.cap2 %> </li>
-      <li> <%= @pokemon.cap3 %> </li>
-      <li> <%= @pokemon.cap4 %> </li>
-    </ul>
-
     </div>
 
-    <u><em>Trainer:</u> <%= @pokemon.user.username %></em>
+    <div class="card-content">
+      <div class="card-photo">
+        <% if @pokemon.photo.attached? %>
+          <%= cl_image_tag @pokemon.photo.key %>
+        <% end %>
+      </div>
 
-<br>
-<br>
+      <div class="card-info">
+        <div class="card-stats">
+          <h3><strong>Stats:</strong></h3>
+          <ul>
+            <li> LVL : <%= @pokemon.lvl %> </li>
+            <li> HP : <%= @pokemon.hp %> </li>
+            <li> ATK : <%= @pokemon.atk %> </li>
+            <li> DEF : <%= @pokemon.def %> </li>
+            <li> SPD : <%= @pokemon.spd %> </li>
+          </ul>
+        </div>
 
-    <div class="card-btn">
-      <%= link_to "Edit this Pokémon", edit_pokemon_path(@pokemon), class: "btn btn-info" %>
+        <div class="card-capacities">
+          <h3><strong>Capacities:</strong></h3>
+          <ul>
+            <li> <%= @pokemon.cap1 %> </li>
+            <li> <%= @pokemon.cap2 %> </li>
+            <li> <%= @pokemon.cap3 %> </li>
+            <li> <%= @pokemon.cap4 %> </li>
+          </ul>
+        </div>
 
-      <%= link_to "Back to Pokémons", pokemons_path, class: "btn btn-success" %>
+        <div class="card-nature">
+          <u><em>Nature:</em></u> <%= @pokemon.nature %>
+          <u><em>Trainer:</u> <%= @pokemon.user.username %></em>
+        </div>
 
-      <%= button_to "Delete this Pokémon", @pokemon, method: :delete, class: "btn btn-danger" %>
+        <div class="card-btn">
+          <a href="#" class="btn btn-success">Let's Go !</a>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
+
+      <%# <%= link_to "Edit this Pokémon", edit_pokemon_path(@pokemon), class: "btn btn-info" %>
+
+      <%# <%= link_to "Back to Pokémons", pokemons_path, class: "btn btn-success" %>
+
+      <%# <%= button_to "Delete this Pokémon", @pokemon, method: :delete, class: "btn btn-danger" %>
