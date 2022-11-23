@@ -1,42 +1,44 @@
-<h1 class="card-title"><strong><%= @pokemon.name %></strong></h1>
+<div style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.pinimg.com/originals/2b/3b/04/2b3b04771ccca26c3dd96d781b0117ca.jpg);">
 
-<div class="card" style="width: 550px;">
 
-  <% if @pokemon.photo.attached? %>
-    <%= cl_image_tag @pokemon.photo.key %>
-  <% end %>
+  <div class="card" style="width: 1000px;">
+    <h1 class="card-title"><strong><%= @pokemon.name %></strong></h1>
 
-  <div class="card-body">
+    <div class="card-  body">
+      <div class="card-text">
 
-    <div class="card-text">
-      <h5><em><%= @pokemon.typ %></em></h5>
-      <ul>
-        <li> HP : <%= @pokemon.hp %> </li>
-        <li> ATK : <%= @pokemon.atk %> </li>
-        <li> DEF : <%= @pokemon.def %> </li>
-        <li> SPD : <%= @pokemon.spd %> </li>
-      </ul>
+        <% if @pokemon.photo.attached? %>
+          <%= cl_image_tag @pokemon.photo.key %>
+        <% end %>
 
-    <h5><strong>Capacities:</strong></h5>
-    <ul>
-      <li> <%= @pokemon.cap1 %> </li>
-      <li> <%= @pokemon.cap2 %> </li>
-      <li> <%= @pokemon.cap3 %> </li>
-      <li> <%= @pokemon.cap4 %> </li>
-    </ul>
+        <h5><em><%= @pokemon.typ %></em></h5>
+        <ul>
+          <li> HP : <%= @pokemon.hp %> </li>
+          <li> ATK : <%= @pokemon.atk %> </li>
+          <li> DEF : <%= @pokemon.def %> </li>
+          <li> SPD : <%= @pokemon.spd %> </li>
+        </ul>
 
-    </div>
+        <h5><strong>Capacities:</strong></h5>
+        <ul>
+          <li> <%= @pokemon.cap1 %> </li>
+          <li> <%= @pokemon.cap2 %> </li>
+          <li> <%= @pokemon.cap3 %> </li>
+          <li> <%= @pokemon.cap4 %> </li>
+        </ul>
 
-    <u><em>Trainer:</u> <%= @pokemon.user.username %></em>
+      </div>
 
-<br>
-<br>
+      <u><em>Trainer:</u> <%= @pokemon.user.username %></em>
 
-    <div class="card-btn">
-      <%= link_to "Edit this Pokémon", edit_pokemon_path(@pokemon), class: "btn btn-info" %>
+  <br>
+  <br>
 
-      <%= link_to "Back to Pokémons", pokemons_path, class: "btn btn-success" %>
+      <div class="card-btn">
+        <%= link_to "Edit this Pokémon", edit_pokemon_path(@pokemon), class: "btn btn-info" %>
 
-      <%= button_to "Delete this Pokémon", @pokemon, method: :delete, class: "btn btn-danger" %>
-    </div>
-</div>
+        <%= link_to "Back to Pokémons", pokemons_path, class: "btn btn-success" %>
+
+        <%= button_to "Delete this Pokémon", @pokemon, method: :delete, class: "btn btn-danger" %>
+      </div>
+  </div>
