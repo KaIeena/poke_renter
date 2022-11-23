@@ -1,6 +1,6 @@
 
 
-.card {
+.card-index {
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
   width: 350px;
@@ -9,27 +9,27 @@
 
 }
 
-.card-title {
+.card-title-index {
   text-align: center;
   margin: 5px;
 }
 
-.card-text {
+.card-text-index {
   column-count: 2;
   display: flex;
 }
 
-.card-btn {
+.card-btn-index {
   column-count: 3;
   display: flex;
 }
 
-.card-img {
+.card-img-index {
   display: flex;
   margin: auto;
   padding: 6px;
   width: 300px;
-  height: 380px;
+  height: 350px;
   border: solid black 2px;
   background-color: rgba(222, 195, 144, 0.971);
 }
