@@ -1,12 +1,17 @@
+
+
 .card {
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
-  width: 250px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
 
 }
 
 .card-title {
-  text-align: inline;
+  text-align: center;
+  margin: 5px;
 }
 
 .card-text {
@@ -18,3 +23,160 @@
   column-count: 3;
   display: flex;
 }
+
+.card-img {
+  display: flex;
+  margin: auto;
+  padding: 6px;
+  width: 300px;
+  height: 380px;
+  border: solid black 2px;
+  background-color: rgba(222, 195, 144, 0.971);
+}
+
+.card-Normal{
+ background-color: #A8A77A;
+ margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
+.card-Feu{
+  background-color: #EE8130;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
+.card-Eau{
+  background-color: #6390F0;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
+.card-Plante{
+  background-color: #7AC74C;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
+.card-Électrik{
+  background-color: #F7D02C;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
+.card-Sol{
+  background-color: #E2BF65;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
+.card-Poison{
+  background-color: #A33EA1;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
+.card-Roche{
+  background-color: #B6A136;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
+.card-Psy{
+  background-color: #F95587;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
+.card-Spectre{
+  background-color: #735797;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
+.card-Combat{
+  background-color: #C22E28;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
+.card-Dragon{
+  background-color: #6F35FC;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
+.card-Insecte{
+  background-color: #A6B91A;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
+.card-Vol{
+  background-color: #A98FF3;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
+// card avec condition + css apres
+// if
+// Normal Type: A8A77A
+// Fire Type: EE8130
+// Water Type: 6390F0
+// Electric Type: #F7D02C
+// Grass Type: 7AC74C
+// Ice Type: 96D9D6
+// Fighting Type: C22E28
+// Poison Type: A33EA1
+// Ground Type: E2BF65
+// Flying Type: A98FF3
+// Psychic Type: F95587
+// Bug Type: A6B91A
+// Rock Type: B6A136
+// Ghost Type: 735797
+// Dragon Type: 6F35FC
+// Dark Type: 705746
+// Steel Type: B7B7CE
+// Fairy Type: D685AD
