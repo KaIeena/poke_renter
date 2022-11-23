@@ -2,7 +2,7 @@ class Pokemon < ApplicationRecord
   belongs_to :user
   has_one_attached :photo
 
-  NATURES = ["Assuré", "Bizarre", "Brave", "Calme", "Discret", "Discret", "Docile", "Doux", "Foufou", "Gentil", "Hardi", "Jovial", "Lâche", "Malin", "Malpoli", "Mauvais", "Modeste", "Naïf", "Pressé", "Prudent", "Pudique", "Relax", "Rigide", "Sérieux", "Solo", "Timide"]
+  NATURES = ["Assuré", "Bizarre", "Brave", "Calme", "Discret", "Docile", "Doux", "Foufou", "Gentil", "Hardi", "Jovial", "Lâche", "Malin", "Malpoli", "Mauvais", "Modeste", "Naïf", "Pressé", "Prudent", "Pudique", "Relax", "Rigide", "Sérieux", "Solo", "Timide"]
 
   TYPES = ["Normal", "Plante", "Feu", "Eau", "Électrik", "Vol", "Insecte", "Roche", "Sol", "Psy", "Poison", "Spectre", "Combat", "Glace", "Dragon"]
 
