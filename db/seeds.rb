@@ -56,6 +56,7 @@ pokemon = Pokemon.new(
   cap2: "Mimi-Queue",
   cap3: "Vive-Attaque",
   cap4: "Jet de Sable",
+  lvl: 100,
   hp: 251,
   atk: 146,
   def: 136,
@@ -73,6 +74,7 @@ pokemon = Pokemon.new(
   cap2: "Vampigraine",
   cap3: "Fouet Lianes",
   cap4: "Poudre Dodo",
+  lvl: 100,
   hp: 231,
   atk: 134,
   def: 134,
@@ -91,6 +93,7 @@ pokemon = Pokemon.new(
   cap2: "Sécrétion",
   cap3: " - ",
   cap4: " - ",
+  lvl: 100,
   hp: 241,
   atk: 76,
   def: 146,
@@ -109,6 +112,7 @@ pokemon = Pokemon.new(
   cap2: "Frappe Atlas",
   cap3: "Vol",
   cap4: "Cru-Aile",
+  lvl: 100,
   hp: 297,
   atk: 204,
   def: 192,
@@ -127,6 +131,7 @@ pokemon = Pokemon.new(
   cap2: "Pistolet à O",
   cap3: "Amnésie",
   cap4: "Explosion",
+  lvl: 100,
   hp: 241,
   atk: 140,
   def: 132,
@@ -145,6 +150,7 @@ pokemon = Pokemon.new(
   cap2: "Vive-Attaque",
   cap3: "Hâte",
   cap4: "Souplesse",
+  lvl: 100,
   hp: 211,
   atk: 146,
   def: 116,
@@ -163,6 +169,7 @@ pokemon = Pokemon.new(
   cap2: "Étreinte",
   cap3: "Armure",
   cap4: "Souplesse",
+  lvl: 100,
   hp: 211,
   atk: 146,
   def: 116,
@@ -181,6 +188,7 @@ pokemon = Pokemon.new(
   cap2: "Jet de Sable",
   cap3: "Tranche",
   cap4: "Séisme",
+  lvl: 100,
   hp: 161,
   atk: 146,
   def: 86,
@@ -199,6 +207,7 @@ pokemon = Pokemon.new(
   cap2: "Ultrason",
   cap3: "Morsure",
   cap4: "Cru-Aile",
+  lvl: 100,
   hp: 221,
   atk: 126,
   def: 106,
@@ -217,6 +226,7 @@ pokemon = Pokemon.new(
   cap2: "Vol",
   cap3: "Cyclone",
   cap4: "Vive-Attaque",
+  lvl: 100,
   hp: 267,
   atk: 156,
   def: 146,
@@ -235,6 +245,7 @@ pokemon = Pokemon.new(
   cap2: "Groz'Yeux",
   cap3: "Puissance",
   cap4: "Poing Karaté",
+  lvl: 100,
   hp: 281,
   atk: 196,
   def: 136,
@@ -253,6 +264,7 @@ pokemon = Pokemon.new(
   cap2: "Léchouille",
   cap3: "Dévorêve",
   cap4: "Ombre Nocturne",
+  lvl: 100,
   hp: 261,
   atk: 296,
   def: 167,
@@ -271,6 +283,7 @@ pokemon = Pokemon.new(
   cap2: "Psyko",
   cap3: "Métronome",
   cap4: "Ultralaser",
+  lvl: 100,
   hp: 251,
   atk: 306,
   def: 126,
@@ -278,4 +291,42 @@ pokemon = Pokemon.new(
   user_id: james.id
 )
 pokemon.photo.attach(io: file, filename: "alakazam.png", content_type: "image/png")
+pokemon.save
+
+
+file = URI.open("https://www.pokepedia.fr/images/thumb/4/4d/Lokhlass-RFVF.png/375px-Lokhlass-RFVF.png")
+pokemon = Pokemon.new(
+  name: "Lokhlass",
+  typ: "Glace",
+  cap1: "Onde Boréale",
+  cap2: "Surf",
+  cap3: "Laser Glace",
+  cap4: "Ultralaser",
+  lvl: 100,
+  hp: 251,
+  atk: 306,
+  def: 126,
+  spd: 276,
+  user_id: sasha.id
+)
+pokemon.photo.attach(io: file, filename: "lokhlass.png", content_type: "image/png")
+pokemon.save
+
+
+file = URI.open("https://www.pokepedia.fr/images/thumb/8/87/Dracolosse-RFVF.png/375px-Dracolosse-RFVF.png")
+pokemon = Pokemon.new(
+  name: "Dracolosse",
+  typ: "Dragon",
+  cap1: "Draco-Rage",
+  cap2: "Souplesse",
+  cap3: "Poing-Éclair",
+  cap4: "Ultralaser",
+  lvl: 100,
+  hp: 251,
+  atk: 306,
+  def: 126,
+  spd: 276,
+  user_id: ondine.id
+)
+pokemon.photo.attach(io: file, filename: "dracolosse.png", content_type: "image/png")
 pokemon.save
