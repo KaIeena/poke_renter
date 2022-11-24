@@ -1,0 +1,25 @@
+<div class="container">
+  <%= simple_form_for booking do |f| %>
+    <div>
+      <%= f.input :photo, as: :file %>
+      <%= f.input :name, collection:  Pokemon::POKEMONS %>
+      <%= f.input :typ, collection: Pokemon::TYPES %>
+    </div>
+
+    <div>
+      <%= f.input :hp %>
+      <%= f.input :atk %>
+      <%= f.input :def %>
+      <%= f.input :spd %>
+    </div>
+      <%= f.input :cap1, collection:  Pokemon::CAPACITIES%>
+      <%= f.input :cap2, collection:  Pokemon::CAPACITIES%>
+      <%= f.input :cap3, collection:  Pokemon::CAPACITIES%>
+      <%= f.input :cap4, collection:  Pokemon::CAPACITIES%>
+    </div>
+
+    <div>
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
