@@ -33,7 +33,9 @@
 }
 
 .card-Normal{
-  background-color: #A8A77A;
+  background-image: asset-url("colorless.png");
+  background-size: cover;
+  background-position: center;
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
   width: 350px;
@@ -42,7 +44,9 @@
 }
 
 .card-Feu{
-  background-color: #EE8130;
+  background-image: asset-url("fire_classic.png");
+  background-size: cover;
+  background-position: center;
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
   width: 350px;
@@ -51,7 +55,9 @@
 }
 
 .card-Eau{
-  background-color: #6390F0;
+  background-image: asset-url("water.png");
+  background-size: cover;
+  background-position: center;
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
   width: 350px;
@@ -60,7 +66,9 @@
 }
 
 .card-Plante{
-  background-color: #7AC74C;
+  background-image: asset-url("grass.png");
+  background-size: cover;
+  background-position: center;;
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
   width: 350px;
@@ -69,7 +77,9 @@
 }
 
 .card-Électrik{
-  background-color: #F7D02C;
+  background-image: asset-url("lightning.png");
+  background-size: cover;
+  background-position: center;
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
   width: 350px;
@@ -78,7 +88,9 @@
 }
 
 .card-Sol{
-  background-color: #E2BF65;
+  background-image: asset-url("ground_texture.png");
+  background-size: cover;
+  background-position: center;
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
   width: 350px;
@@ -87,7 +99,9 @@
 }
 
 .card-Poison{
-  background-color: #A33EA1;
+  background-image: asset-url("poison_texture.png");
+  background-size: cover;
+  background-position: center;
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
   width: 350px;
@@ -96,7 +110,9 @@
 }
 
 .card-Roche{
-  background-color: #B6A136;
+  background-image: asset-url("metal_classic.png");
+  background-size: cover;
+  background-position: center;;
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
   width: 350px;
@@ -105,7 +121,9 @@
 }
 
 .card-Psy{
-  background-color: #F95587;
+  background-image: asset-url("psychic.png");
+  background-size: cover;
+  background-position: center;
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
   width: 350px;
@@ -114,7 +132,9 @@
 }
 
 .card-Spectre{
-  background-color: #735797;
+  background-image: asset-url("ghost_texture.png");
+  background-size: cover;
+  background-position: center;
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
   width: 350px;
@@ -123,7 +143,9 @@
 }
 
 .card-Combat{
-  background-color: #C22E28;
+  background-image: asset-url("fighting.png");
+  background-size: cover;
+  background-position: center;;
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
   width: 350px;
@@ -132,7 +154,9 @@
 }
 
 .card-Dragon{
-  background-color: #6F35FC;
+  background-image: asset-url("dragon_new.png");
+  background-size: cover;
+  background-position: center;
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
   width: 350px;
@@ -141,7 +165,9 @@
 }
 
 .card-Insecte{
-  background-color: #A6B91A;
+  background-image: asset-url("bug_texture.png");
+  background-size: cover;
+  background-position: center;
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
   width: 350px;
@@ -150,7 +176,9 @@
 }
 
 .card-Vol{
-  background-color: #A98FF3;
+  background-image: asset-url("flying_texture.png");
+  background-size: cover;
+  background-position: center;
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
   width: 350px;
@@ -159,7 +187,9 @@
 }
 
 .card-Glace{
-  background-color: #96D9D6;
+  background-image: asset-url("ice_texture.png");
+  background-size: cover;
+  background-position: center;;
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
   width: 350px;

@@ -1,6 +1,6 @@
 <div class= "index-pokemon">
 
-  <h1>Pokemons</h1>
+  <h1>Pokémons available in Renter</h1>
 
   <div class="container" >
     <div id="pokemons">
@@ -12,8 +12,8 @@
             <% end %>
             <div class="card-body-index">
             <h5 class="card-title-index"> <strong><%= pokemon.name %> </strong></h5>
-            <p class="card-text-index"> <strong> Type : </strong> <%= pokemon.typ %></p>
-            <p class="card-text-index"> <strong> Trainer : </strong> <%= pokemon.user.username %> </p>
+            <p class="card-text-index"> <strong>Type </strong> : <%= pokemon.typ %></p>
+            <p class="card-text-index"> <strong>Trainer </strong> : <%= pokemon.user.username %> </p>
             <%= link_to "Show pokemon", pokemon, class:"btn btn-primary" %>
             </div>
           </div>
