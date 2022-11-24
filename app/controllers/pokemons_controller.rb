@@ -4,6 +4,22 @@ class PokemonsController < ApplicationController
 
   def index
     @pokemons = Pokemon.all
+
+    @pokemons = @pokemons.reject do |pokemon|
+      pokemon.bookings != []
+    end
+
+    if params[:query]
+      sql_query = <<~SQL
+      pokemons.name @@ :query
+      OR pokemons.typ @@ :query
+      OR pokemons.cap1 @@ :query
+      OR pokemons.cap2 @@ :query
+      OR pokemons.cap3 @@ :query
+      OR pokemons.cap4 @@ :query
+      SQL
+      @pokemons = Pokemon.where(sql_query, query: "%#{params[:query]}%")
+    end
   end
 
   def show
