@@ -1,8 +1,9 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 300px ;
-  height: 250px;
+  padding: 16%;
+  height: 11%;
+  text-align: center;
 }
 
 .banner h1 {
@@ -11,6 +12,7 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
+  align-items: center;
 }
 
 .banner p {
