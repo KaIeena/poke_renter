@@ -8,12 +8,14 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <form class="d-flex" role="search">
-      <%= form_with url: pokemons_path, method: :get, class: "d-flex" do %>
-        <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a Pokémon" %>
-        <button class="btn btn-outline-danger" type="submit">Go!</button>
-      <% end %>
-    </form>
+    <% if action_name == "index" && controller_name == "pokemons" %>
+      <form class="d-flex" role="search">
+        <%= form_with url: pokemons_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a Pokémon" %>
+          <button class="btn btn-outline-danger" type="submit">Go!</button>
+        <% end %>
+      </form>
+    <% end %>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
