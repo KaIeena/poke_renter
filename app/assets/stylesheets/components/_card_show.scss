@@ -1,5 +1,5 @@
 .card {
-  width: 1000px;
+  width: 70%;
   margin: auto;
   display: flex;
 }
@@ -40,4 +40,10 @@
   position: absolute;
   left: 400px;
   top: 350px;
+}
+
+.card-rent {
+  position: absolute;
+  left: 160px;
+  top: 250px;
 }

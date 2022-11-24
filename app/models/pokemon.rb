@@ -1,5 +1,6 @@
 class Pokemon < ApplicationRecord
   belongs_to :user
+  has_many :bookings
   has_one_attached :photo
 
   NATURES = ["Assuré", "Bizarre", "Brave", "Calme", "Discret", "Docile", "Doux", "Foufou", "Gentil", "Hardi", "Jovial", "Lâche", "Malin", "Malpoli", "Mauvais", "Modeste", "Naïf", "Pressé", "Prudent", "Pudique", "Relax", "Rigide", "Sérieux", "Solo", "Timide"]
