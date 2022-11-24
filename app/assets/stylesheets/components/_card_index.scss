@@ -33,29 +33,7 @@
 }
 
 .card-Normal{
-  background-image: asset-url("colorless.png");
-  background-size: cover;
-  background-position: center;
-  margin: 5px 5px 5px 5px;
-  padding: 10px 10px;
-  width: 350px;
-  border: solid #D4B810 10px;
-  border-radius: 4px;
-}
-
-.card-Feu{
-  background-image: asset-url("fire_classic.png");
-  background-size: cover;
-  background-position: center;
-  margin: 5px 5px 5px 5px;
-  padding: 10px 10px;
-  width: 350px;
-  border: solid #D4B810 10px;
-  border-radius: 4px;
-}
-
-.card-Eau{
-  background-image: asset-url("water.png");
+  background-image: asset-url("normal.png");
   background-size: cover;
   background-position: center;
   margin: 5px 5px 5px 5px;
@@ -76,6 +54,28 @@
   border-radius: 4px;
 }
 
+.card-Feu{
+  background-image: asset-url("fire.png");
+  background-size: cover;
+  background-position: center;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
+.card-Eau{
+  background-image: asset-url("water.png");
+  background-size: cover;
+  background-position: center;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
 .card-Électrik{
   background-image: asset-url("lightning.png");
   background-size: cover;
@@ -87,8 +87,8 @@
   border-radius: 4px;
 }
 
-.card-Sol{
-  background-image: asset-url("ground_texture.png");
+.card-Vol{
+  background-image: asset-url("fly.png");
   background-size: cover;
   background-position: center;
   margin: 5px 5px 5px 5px;
@@ -98,8 +98,8 @@
   border-radius: 4px;
 }
 
-.card-Poison{
-  background-image: asset-url("poison_texture.png");
+.card-Insecte{
+  background-image: asset-url("bug.png");
   background-size: cover;
   background-position: center;
   margin: 5px 5px 5px 5px;
@@ -110,9 +110,20 @@
 }
 
 .card-Roche{
-  background-image: asset-url("metal_classic.png");
+  background-image: asset-url("rock.png");
   background-size: cover;
   background-position: center;;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
+.card-Sol{
+  background-image: asset-url("ground.png");
+  background-size: cover;
+  background-position: center;
   margin: 5px 5px 5px 5px;
   padding: 10px 10px;
   width: 350px;
@@ -131,8 +142,19 @@
   border-radius: 4px;
 }
 
+.card-Poison{
+  background-image: asset-url("poison.png");
+  background-size: cover;
+  background-position: center;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
+
 .card-Spectre{
-  background-image: asset-url("ghost_texture.png");
+  background-image: asset-url("ghost.png");
   background-size: cover;
   background-position: center;
   margin: 5px 5px 5px 5px;
@@ -153,41 +175,8 @@
   border-radius: 4px;
 }
 
-.card-Dragon{
-  background-image: asset-url("dragon_new.png");
-  background-size: cover;
-  background-position: center;
-  margin: 5px 5px 5px 5px;
-  padding: 10px 10px;
-  width: 350px;
-  border: solid #D4B810 10px;
-  border-radius: 4px;
-}
-
-.card-Insecte{
-  background-image: asset-url("bug_texture.png");
-  background-size: cover;
-  background-position: center;
-  margin: 5px 5px 5px 5px;
-  padding: 10px 10px;
-  width: 350px;
-  border: solid #D4B810 10px;
-  border-radius: 4px;
-}
-
-.card-Vol{
-  background-image: asset-url("flying_texture.png");
-  background-size: cover;
-  background-position: center;
-  margin: 5px 5px 5px 5px;
-  padding: 10px 10px;
-  width: 350px;
-  border: solid #D4B810 10px;
-  border-radius: 4px;
-}
-
 .card-Glace{
-  background-image: asset-url("ice_texture.png");
+  background-image: asset-url("ice.png");
   background-size: cover;
   background-position: center;;
   margin: 5px 5px 5px 5px;
@@ -197,6 +186,16 @@
   border-radius: 4px;
 }
 
+.card-Dragon{
+  background-image: asset-url("dragon.png");
+  background-size: cover;
+  background-position: center;
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px;
+  width: 350px;
+  border: solid #D4B810 10px;
+  border-radius: 4px;
+}
 
 // card avec condition + css apres
 // if
