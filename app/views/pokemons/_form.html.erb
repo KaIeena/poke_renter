@@ -1,25 +1,56 @@
-<div class="container">
+<div class= "form-pokemon">
   <%= simple_form_for pokemon do |f| %>
-    <div>
-      <%= f.input :photo, as: :file %>
-      <%= f.input :name, collection:  Pokemon::POKEMONS %>
-      <%= f.input :typ, collection: Pokemon::TYPES %>
-    </div>
+    <div class="card">
+      <div class="form-name-input">
+      </div>
 
-    <div>
-      <%= f.input :hp %>
-      <%= f.input :atk %>
-      <%= f.input :def %>
-      <%= f.input :spd %>
-    </div>
-      <%= f.input :cap1, collection:  Pokemon::CAPACITIES%>
-      <%= f.input :cap2, collection:  Pokemon::CAPACITIES%>
-      <%= f.input :cap3, collection:  Pokemon::CAPACITIES%>
-      <%= f.input :cap4, collection:  Pokemon::CAPACITIES%>
-    </div>
+      <div class="card-content">
+        <div class="card-photo">
+        <h3><strong>Infos:</strong></h3>
+          <%= f.input :name, collection:  Pokemon::POKEMONS%>
+          <%= f.input :typ, collection: Pokemon::TYPES %>
+          <%= f.input :nature, collection: Pokemon::NATURES %>
+          <%= f.input :photo, as: :file %>
+        </div>
 
-    <div>
-      <%= f.submit %>
+        <div class="card-info">
+          <div class="card-stats">
+            <h3><strong>Stats:</strong></h3>
+            <ul class= "list-unstyled">
+              <li> <%= f.input :lvl %> </li>
+              <li> <%= f.input :hp %> </li>
+              <li> <%= f.input :atk %> </li>
+              <li> <%= f.input :def %> </li>
+              <li> <%= f.input :spd %> </li>
+            </ul>
+          </div>
+
+          <div class="card-capacities">
+            <h3><strong>Capacities:</strong></h3>
+            <ul class= "list-unstyled">
+              <li> <%= f.input :cap1, collection:  Pokemon::CAPACITIES%> </li>
+              <li> <%= f.input :cap2, collection:  Pokemon::CAPACITIES%> </li>
+              <li> <%= f.input :cap3, collection:  Pokemon::CAPACITIES%> </li>
+              <li> <%= f.input :cap4, collection:  Pokemon::CAPACITIES%> </li>
+              <br>
+              <br>
+            </ul>
+          </div>
+
+          <div class="card-btn form-card-btn">
+            <%= f.submit class:"btn btn-outline-danger" %>
+          </div>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>
+
+
+
+
+      <%# <%= link_to "Edit this Pokémon", edit_pokemon_path(@pokemon), class: "btn btn-info" %>
+
+      <%# <%= link_to "Back to Pokémons", pokemons_path, class: "btn btn-success" %>
+
+      <%# <%= button_to "Delete this Pokémon", @pokemon, method: :delete, class: "btn btn-danger" %>
