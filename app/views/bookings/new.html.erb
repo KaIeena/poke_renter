@@ -41,16 +41,15 @@
           <u><em>Trainer:</u> <%= @pokemon.user.username %></em>
         </div>
 
-        <div class="card-btn">
-          <%= link_to "Let's Go !!", new_pokemon_booking_path(@pokemon), class:"btn btn-success" %>
+        <div class="card-rent">
+          <%= simple_form_for [@pokemon, @booking] do |f| %>
+            <%= f.input :rent_period %>
+            <%= f.submit %>
+          <% end %>
+        </div>
+
         </div>
       </div>
     </div>
   </div>
 </div>
-
-      <%# <%= link_to "Edit this Pokémon", edit_pokemon_path(@pokemon), class: "btn btn-info" %>
-
-      <%# <%= link_to "Back to Pokémons", pokemons_path, class: "btn btn-success" %>
-
-      <%# <%= button_to "Delete this Pokémon", @pokemon, method: :delete, class: "btn btn-danger" %>

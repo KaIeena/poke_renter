@@ -1,22 +1,25 @@
-<h1>Pokemons</h1>
+<div class= "index-pokemon">
 
-<div class="container" >
-<div id="pokemons">
-<div class="cards">
-    <% @pokemons.each do |pokemon| %>
-    <div class="card-<%= pokemon.typ %>">
-      <% if pokemon.photo.attached? %>
-        <%= cl_image_tag pokemon.photo.key, class:"card-img-index" %>
-      <% end %>
-        <div class="card-body-index">
-        <h5 class="card-title-index"> <strong><%= pokemon.name %> </strong></h5>
-        <p class="card-text-index"> <strong> Type : </strong> <%= pokemon.typ %></p>
-        <p class="card-text-index"> <strong> Trainer : </strong> <%= pokemon.user.username %> </p>
-        <%= link_to "Show pokemon", pokemon, class:"btn btn-primary" %>
+  <h1>Pokémons available in Renter</h1>
+
+  <div class="container" >
+    <div id="pokemons">
+      <div class="cards">
+          <% @pokemons.each do |pokemon| %>
+          <div class="card-<%= pokemon.typ %>">
+            <% if pokemon.photo.attached? %>
+              <%= cl_image_tag pokemon.photo.key, class:"card-img-index" %>
+            <% end %>
+            <div class="card-body-index">
+            <h5 class="card-title-index"> <strong><%= pokemon.name %> </strong></h5>
+            <p class="card-text-index"> <strong>Type </strong> : <%= pokemon.typ %></p>
+            <p class="card-text-index"> <strong>Trainer </strong> : <%= pokemon.user.username %> </p>
+            <%= link_to "Show pokemon", pokemon, class:"btn btn-primary" %>
+            </div>
+          </div>
+          <% end %>
         </div>
       </div>
-    <% end %>
+    </div>
   </div>
-</div>
-</div>
 </div>
