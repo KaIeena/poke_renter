@@ -34,7 +34,7 @@ class PokemonsController < ApplicationController
     @pokemon.user = current_user
 
     if @pokemon.save
-      redirect_to @pokemon, notice: "Pokemon was successfully created."
+      redirect_to pokemons_path, notice: "Pokemon was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
@@ -65,7 +65,7 @@ class PokemonsController < ApplicationController
 
 
   def pokemon_params
-    params.require(:pokemon).permit(:photo, :name, :typ, :hp, :atk, :def, :spd, :cap1, :cap2, :cap3, :cap4, :user_id)
+    params.require(:pokemon).permit(:photo, :name, :typ, :nature, :lvl, :hp, :atk, :def, :spd, :cap1, :cap2, :cap3, :cap4, :user_id)
   end
 
 end
