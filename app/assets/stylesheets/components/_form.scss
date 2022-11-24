@@ -1,0 +1,35 @@
+.form-name-input{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  justify-content: center;
+  select {
+    width: 47%;
+  }
+}
+
+.card-capacities {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.form-card-btn {
+  left: -232px;
+  top: 393px;
+  color: white;
+  // input {
+  //   background-color: rgba(255, 0, 0, 0.767);
+  //   color: white;
+  //   border: red;
+  // }
+}
+
+.h1new {
+  text-align: center;
+  color: red;
+}
+
+.card {
+  margin-top: 30px;
+  border: none;
+}
