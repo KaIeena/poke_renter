@@ -33,14 +33,47 @@
 
 .card-nature {
   position: absolute;
-  left: 210px;
+  left: 160px;
+  top: 180px;
+}
+
+.card-trainer {
+  position: absolute;
+  left: 470px;
+  top: 180px;
+}
+
+.card-go {
+  position: absolute;
+  left: 350px;
+  top: 280px;
+}
+
+.card-reviews {
+  position: absolute;
+  left: 180px;
+  top: 280px;
+}
+
+.card-delete {
+  position: absolute;
+  left: 510px;
+  top: 280px;
+}
+
+.card-text{
+  position: absolute;
+  left: 400px;
   top: 200px;
 }
 
-.card-btn {
-  position: absolute;
-  left: 400px;
-  top: 350px;
+.btn-x {
+  color: rgba(251, 49, 49, 0.726);
+  text-decoration: none;
+}
+
+.btn-x:hover {
+  color: red;
 }
 
 .card-rent {

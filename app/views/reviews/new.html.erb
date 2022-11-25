@@ -1,6 +1,6 @@
 <div class="container">
   <%= simple_form_for [@pokemon, @review] do |f| %>
     <%= f.input :content  %>
-    <%= f.submit %>
+    <%= f.submit 'Add review', class:"btn btn-outline-danger"  %>
   <% end %>
 </div>
