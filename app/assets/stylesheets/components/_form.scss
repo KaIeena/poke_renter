@@ -1,16 +1,12 @@
-.form-name-input{
+.form-inside-input{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
+  grid-column-gap: 3px;
   justify-content: center;
   select {
-    width: 47%;
+    width: 96%;
   }
-}
-
-.card-capacities {
-  padding-left: 100px;
-  padding-right: 100px;
 }
 
 .form-card-btn {
@@ -29,7 +25,27 @@
   color: red;
 }
 
-.card {
+.card-general {
   margin-top: 30px;
   border: none;
+}
+
+.card_stats {
+margin-left: 10px;
+}
+
+.form-card-informations {
+  padding-left: 16px
+}
+
+.form-name-input select {
+  width: 95%;
+}
+
+.card-capacitie {
+  margin-left: 10px;
+}
+
+.form-submit-btn {
+  padding-left: 100px;
 }
