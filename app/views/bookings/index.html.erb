@@ -1,27 +1,29 @@
-<div class= "index-pokemon">
+<h1 class="index-header">Rented Pokémons</h1>
 
-  <h1>My Rented Pokémons</h1>
+<div class="index-pokemon">
 
   <div class="container" >
-    <div id="bookings">
-      <div class="cards">
-          <% @bookings.each do |booking| %>
+    <div id="pokemons">
+      <div class="cards-index">
+        <% @bookings.each do |booking| %>
           <div class="card-<%= booking.pokemon.typ %>">
             <% if booking.pokemon.photo.attached? %>
               <%= cl_image_tag booking.pokemon.photo.key, class:"card-img-index" %>
             <% end %>
+
             <div class="card-body-index">
-            <h5 class="card-title-index"> <strong><%= booking.pokemon.name %> </strong></h5>
-            <p class="card-text-index"> <strong> Type : </strong> <%= booking.pokemon.typ %></p>
-            <p class="card-text-index"> <strong> Trainer : </strong> <%= booking.pokemon.user.username %> </p>
-            <%= link_to "X", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+              <h5 class="card-title-index"> <strong><%= booking.pokemon.name %> </strong></h5>
+              <p class="card-text-index"> <strong> Type : </strong> <%= booking.pokemon.typ %></p>
+              <p class="card-text-index"> <strong> Trainer : </strong> <%= booking.pokemon.user.username %> </p>
+              <%= link_to "X", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
             </div>
           </div>
-          <% end %>
+        <% end %>
         </div>
       </div>
     </div>
   </div>
+
 </div>
 
      <%# <%= button_to "Delete this Pokémon", @pokemon, method: :delete, class: "btn btn-danger" %>
