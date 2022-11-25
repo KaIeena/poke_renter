@@ -15,8 +15,8 @@
               <% end %>
                 <div class="card-body-index">
                   <h5 class="card-title-index"> <strong><%= pokemon.name %> </strong></h5>
-                  <p class="card-text-index"> <strong> Type </strong> : <%= pokemon.typ %></p>
-                  <p class="card-text-index"> <strong> Trainer </strong> : <%= pokemon.user.username %> </p>
+                  <p class="card-text-index"> <strong> Type:  </strong> <%= image_tag "logo_#{pokemon.typ}.png", class:"card-logo-index" %> </p>
+                  <p class="card-text-index"> <strong> Trainer: </strong> &ensp; <%= pokemon.user.username %> </p>
                 </div>
               </div>
             <% end %>

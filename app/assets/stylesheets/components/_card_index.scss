@@ -15,8 +15,12 @@
 .card-text-index {
   column-count: 2;
   display: flex;
+  align-items: center;
 }
 
+.card-logo-index{
+  scale: 60%;
+}
 .card-btn-index {
   column-count: 3;
   display: flex;
