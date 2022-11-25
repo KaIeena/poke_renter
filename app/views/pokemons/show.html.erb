@@ -3,13 +3,17 @@
   <div class="card">
 
     <div class="card-btn-left">
-      <%= link_to "<<", pokemon_path(Pokemon.all[Pokemon.all.find_index(@pokemon)-1]), class:"btn btn-outline-danger" %>
-      <%= %>
+      <% index = Pokemon.all.find_index(@pokemon) %>
+      <% unless index == 0 %>
+        <%= link_to "<<", pokemon_path(Pokemon.all[index-1]), class:"btn btn-outline-danger" %>
+      <% end %>
     </div>
 
     <div class="card-btn-right">
-      <%= link_to ">>", pokemon_path(Pokemon.all[Pokemon.all.find_index(@pokemon)+1]), class:"btn btn-outline-danger" %>
-      <%= %>
+    <% index = Pokemon.all.find_index(@pokemon) %>
+      <% unless index == Pokemon.all.length-1 %>
+        <%= link_to ">>", pokemon_path(Pokemon.all[index+1]), class:"btn btn-outline-danger" %>
+      <% end %>
     </div>
 
     <div class="card-name">
