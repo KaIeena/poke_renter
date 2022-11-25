@@ -7,9 +7,11 @@
       <div class="cards-index">
         <% @bookings.each do |booking| %>
           <div class="card-<%= booking.pokemon.typ %>">
-            <% if booking.pokemon.photo.attached? %>
-              <%= cl_image_tag booking.pokemon.photo.key, class:"card-img-index" %>
-            <% end %>
+              <%= link_to booking.pokemon do %>
+                <% if booking.pokemon.photo.attached? %>
+                  <%= cl_image_tag booking.pokemon.photo.key, class:"card-img-index" %>
+                <% end %>
+              <% end %>
 
             <div class="card-body-index">
               <h5 class="card-title-index"> <strong><%= booking.pokemon.name %> </strong></h5>
