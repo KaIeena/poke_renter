@@ -4,13 +4,16 @@
 
     <div class="card-name">
       <h1><strong><%= @pokemon.name %></strong></h1>
-      <h5><em><%= @pokemon.typ %></em></h5>
+    </div>
+
+    <div class="type-<%= @pokemon.typ %>">
     </div>
 
     <div class="card-content">
       <div class="card-photo">
         <% if @pokemon.photo.attached? %>
-          <%= cl_image_tag @pokemon.photo.key %>
+          <% cl_image_tag @pokemon.photo.key %>
+          <%= image_tag @pokemon.name + ".png" %>
         <% end %>
       </div>
 
@@ -38,22 +41,28 @@
 
         <div class="card-nature">
           <u><em>Nature:</em></u> <%= @pokemon.nature %>
+        </div>
+
+        <div class="card-trainer">
           <u><em>Trainer:</u> <%= @pokemon.user.username %></em>
         </div>
 
-        <div class="card-btn">
+        <div class="card-go">
           <%= link_to "Let's Go !!", new_pokemon_booking_path(@pokemon), class:"btn btn-outline-danger" %>
+        </div>
+
+        <div class="card-delete">
           <% if @pokemon.user == current_user %>
-          <%= link_to "X", pokemon_path(@pokemon), data: { turbo_method: 'delete', turbo_confirm: 'Are you sure?' }  %>
+          <%= link_to "Delete", pokemon_path(@pokemon), data: { turbo_method: 'delete', turbo_confirm: 'Are you sure?' }, class:"btn btn-outline-danger" %>
           <% end %>
         </div>
 
-        <div>
-          <%= link_to "add review", new_pokemon_review_path(@pokemon) %>
+        <div class="card-reviews">
+          <%= link_to "Add review", new_pokemon_review_path(@pokemon), class:"btn btn-outline-danger" %>
 
           <ul>
             <% @pokemon.reviews.each do |review| %>
-              <li><%= review.content %> <%= link_to "X", review_path(review), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?' }  %> </li>
+              <li><%= review.content %> <%= link_to "X", review_path(review), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?' }, class: "btn-x" %> </li>
             <% end %>
           </ul>
         </div>
