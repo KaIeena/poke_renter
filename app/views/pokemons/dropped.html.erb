@@ -1,22 +1,22 @@
-<div class= "index-pokemon">
+<h1 class="index-header">Pokémons dropped in Renter</h1>
 
-  <h1>Pokémons dropped in Renter</h1>
+<div class= "index-pokemon">
 
     <div class="container" >
       <div id="pokemons">
-        <div class="cards">
-            <% @pokemons.each do |pokemon| %>
-              <% if pokemon.user == current_user && %>
+        <div class="cards-index">
+          <% @pokemons.each do |pokemon| %>
+            <% if pokemon.user == current_user %>
+              <%= link_to pokemon do %>
                 <div class="card-<%= pokemon.typ %>">
                   <% if pokemon.photo.attached? %>
                     <%= cl_image_tag pokemon.photo.key, class:"card-img-index" %>
                   <% end %>
-
+                <% end %>
                   <div class="card-body-index">
                     <h5 class="card-title-index"> <strong><%= pokemon.name %> </strong></h5>
                     <p class="card-text-index"> <strong> Type </strong> : <%= pokemon.typ %></p>
                     <p class="card-text-index"> <strong> Trainer </strong> : <%= pokemon.user.username %> </p>
-                    <%= link_to "Go!", pokemon, class:"btn btn-outline-danger" %>
                   </div>
                 </div>
               <% end %>
@@ -25,4 +25,5 @@
         </div>
       </div>
     </div>
+
 </div>
