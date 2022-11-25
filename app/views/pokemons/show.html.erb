@@ -43,6 +43,19 @@
 
         <div class="card-btn">
           <%= link_to "Let's Go !!", new_pokemon_booking_path(@pokemon), class:"btn btn-outline-danger" %>
+          <% if @pokemon.user == current_user %>
+          <%= link_to "X", pokemon_path(@pokemon), data: { turbo_method: 'delete', turbo_confirm: 'Are you sure?' }  %>
+          <% end %>
+        </div>
+
+        <div>
+          <%= link_to "add review", new_pokemon_review_path(@pokemon) %>
+
+          <ul>
+            <% @pokemon.reviews.each do |review| %>
+              <li><%= review.content %> <%= link_to "X", review_path(review), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?' }  %> </li>
+            <% end %>
+          </ul>
         </div>
       </div>
     </div>

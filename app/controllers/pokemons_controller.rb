@@ -57,6 +57,10 @@ class PokemonsController < ApplicationController
     redirect_to pokemons_path
   end
 
+  def dropped
+    @pokemons = Pokemon.all
+  end
+
   private
 
   def set_pokemon
