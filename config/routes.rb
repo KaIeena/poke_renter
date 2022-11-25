@@ -8,6 +8,13 @@ Rails.application.routes.draw do
   # get 'pokemons', to: 'pokemons#index'
   resources :pokemons do
     resources :bookings, only: [:new, :create]
+
+    resources :reviews, only: [:new, :create]
+
+    collection do
+      get :dropped
+    end
   end
   resources :bookings, only: [:index, :destroy]
+  resources :reviews, only: [:destroy]
 end
