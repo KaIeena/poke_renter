@@ -11,7 +11,7 @@
                 <% if booking.pokemon.photo.attached? %>
                   <%= cl_image_tag booking.pokemon.photo.key, class:"card-img-index" %>
                 <% else %>
-                  <%= image_tag "#{pokemon.name}.png", class:"card-img-index" %>
+                  <%= image_tag "#{booking.pokemon.name}.png", class:"card-img-index" %>
                 <% end %>
               <% end %>
 
